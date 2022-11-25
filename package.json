@@ -22,7 +22,8 @@
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/ormdatasouce.ts",
     "db:drop": "npm run typeorm schema:drop",
     "db:create": "npm run typeorm migration:generate",
-    "db:migrate": "npm run typeorm migration:run"
+    "db:migrate": "npm run typeorm migration:run",
+    "db:seed": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/ormseeddatasource.ts migration:run"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
@@ -39,6 +40,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
+    "slugify": "^1.6.5",
     "typeorm": "^0.3.10"
   },
   "devDependencies": {
