@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "af118354-bdff-46f4-88a9-21d2f5c46738",
+		"name": "nestjs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"username\": \"Ihor\",\n        \"email\": \"ihor@gmail.com\",\n        \"password\": \"qwerty\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"email\": \"ihor@gmail.com\",\n        \"password\": \"qwerty\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJJaG9yIiwiZW1haWwiOiJpaG9yQGdtYWlsLmNvbSIsImlhdCI6MTY2ODc1NzMzMH0.Qble3AfPrSoDtmMBQSCTpPUtOi3tqMIgwz9V4OZMuQM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJJaG9yIiwiZW1haWwiOiJpaG9yQGdtYWlsLmNvbSIsImlhdCI6MTY2ODc1NzMzMH0.Qble3AfPrSoDtmMBQSCTpPUtOi3tqMIgwz9V4OZMuQM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "create article",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJJaG9yIiwiZW1haWwiOiJpaG9yQGdtYWlsLmNvbSIsImlhdCI6MTY2ODc1NzMzMH0.Qble3AfPrSoDtmMBQSCTpPUtOi3tqMIgwz9V4OZMuQM",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"article\": {\n        \"title\": \"How to learn English\",\n        \"description\": \"It's not so easy\",\n        \"body\": \"You need to be motivated\",\n        \"tagList\": [\"react\", \"vue\", \"english\"]\n    }\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single article",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJJaG9yIiwiZW1haWwiOiJpaG9yQGdtYWlsLmNvbSIsImlhdCI6MTY2ODc1NzMzMH0.Qble3AfPrSoDtmMBQSCTpPUtOi3tqMIgwz9V4OZMuQM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/articles/how-to-learn-english-2nka0y",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"articles",
+								"how-to-learn-english-2nka0y"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete single article",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJJaG9yIiwiZW1haWwiOiJpaG9yQGdtYWlsLmNvbSIsImlhdCI6MTY2ODc1NzMzMH0.Qble3AfPrSoDtmMBQSCTpPUtOi3tqMIgwz9V4OZMuQM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/articles/slug",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"articles",
+								"slug"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update single article",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJJaG9yIiwiZW1haWwiOiJpaG9yQGdtYWlsLmNvbSIsImlhdCI6MTY2ODc1NzMzMH0.Qble3AfPrSoDtmMBQSCTpPUtOi3tqMIgwz9V4OZMuQM",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"article\": {\n        \"title\": \"Updated\"\n    }\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/articles/how-to-learn-english-2nka0y",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"articles",
+								"how-to-learn-english-2nka0y"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get articles list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJKb2huIiwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsImlhdCI6MTY2OTEwNjExMH0.riTX3cXF8owZqcfB8D1dz0SJ0DK_ZqRJcfNXOCBEq3Q",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"articles"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "author",
+									"value": "ihor",
+									"disabled": true
+								},
+								{
+									"key": "tag",
+									"value": "english",
+									"disabled": true
+								},
+								{
+									"key": "favourited",
+									"value": "John",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like article",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJJaG9yIiwiZW1haWwiOiJpaG9yQGdtYWlsLmNvbSIsImlhdCI6MTY2ODc1NzMzMH0.Qble3AfPrSoDtmMBQSCTpPUtOi3tqMIgwz9V4OZMuQM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/articles/how-to-learn-english-2nka0y/favourite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"articles",
+								"how-to-learn-english-2nka0y",
+								"favourite"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dislike article",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJJaG9yIiwiZW1haWwiOiJpaG9yQGdtYWlsLmNvbSIsImlhdCI6MTY2ODc1NzMzMH0.Qble3AfPrSoDtmMBQSCTpPUtOi3tqMIgwz9V4OZMuQM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/articles/how-to-learn-english-2nka0y/favourite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"articles",
+								"how-to-learn-english-2nka0y",
+								"favourite"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get feed",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJqb2huIiwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsImlhdCI6MTY2OTM2NjQ3N30.3hWVE8MwwCLZ_hxqf-E6Eildxqy3IMIUK1U1eXSWrQg",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/articles/feed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"articles",
+								"feed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "get profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJKb2huIiwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsImlhdCI6MTY2OTEwNjExMH0.riTX3cXF8owZqcfB8D1dz0SJ0DK_ZqRJcfNXOCBEq3Q",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/profiles/vanda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"profiles",
+								"vanda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "follow profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJqb2huIiwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsImlhdCI6MTY2OTM2NjQ3N30.3hWVE8MwwCLZ_hxqf-E6Eildxqy3IMIUK1U1eXSWrQg",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/profiles/vanda/follow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"profiles",
+								"vanda",
+								"follow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unfollow profile",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJqb2huIiwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsImlhdCI6MTY2OTM2NjQ3N30.3hWVE8MwwCLZ_hxqf-E6Eildxqy3IMIUK1U1eXSWrQg",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/profiles/vanda/follow",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"profiles",
+								"vanda",
+								"follow"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
